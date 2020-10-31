@@ -3,8 +3,12 @@
 
 @import 'jekyll-theme-cayman';
 
-.active {
-    color: purple;
+.nav-link {
+    color: silver!important;
+}
+
+.nav-active {
+    color:white!important;
 }
 
 .project-name {

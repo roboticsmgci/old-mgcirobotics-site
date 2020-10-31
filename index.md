@@ -1,3 +1,8 @@
+---
+description: Welcome to the website for Marc Garneau CI's Robotics Club! Our club aims to educate students and expose them to to robotics, promoting teamwork through providing hands-on and interactive experiences with robotics such as competing in tournaments.
+title: Home
+---
+
 # About Us
 
 # News

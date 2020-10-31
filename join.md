@@ -1,4 +1,4 @@
 ---
-description: Add description here.
+description: Here's how you can join us today
+title: Join
 ---
-testing
