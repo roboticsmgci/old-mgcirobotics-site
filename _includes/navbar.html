@@ -1,24 +1,16 @@
-<nav>
-	<ul>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">MGCI Robotics</a>
+        </div>
+        <ul class="nav navbar-nav">
 		{% for navitem in site.data.navbar %}
-		{% if navitem.subcategories != null %}
-		<li>
-			<a href="{{ site.url }}{{ navitem.url }}">{{ navitem.title }} ▼</a>
-			<ul>
-				{% for subcategory in navitem.subcategories %}
-				<li><a href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-				{% endfor %}
-			</ul>
-		</li>
-		{% elsif navitem.title == page.title %}
-		<li class="active">
-			<a href="{{ navitem.url }}">{{ navitem.title }}</a>
-		</li>
-		{% else %}
-		<li>
-			<a href="{{ site.url }}{{ navitem.href }}">{{ navitem.title }}</a>
-		</li>
+            {% if navitem.title == page.title %}
+    		<li class="active"><a href="{{ navitem.url }}">{{ navitem.title }}</a></li>
+    		{% else %}
+    		<li><a href="{{ site.url }}{{ navitem.href }}">{{ navitem.title }}</a></li>
 		{% endif %}
 		{% endfor %}
-	</ul>
+        </ul>
+    </div>
 </nav>
