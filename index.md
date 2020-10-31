@@ -1,7 +1,5 @@
-# Join
+# About Us
 
 # News
 
-# Gallery
-
-# Contact Us
+# Events
