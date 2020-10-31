@@ -1,42 +1,33 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<html lang="{{ site.lang | default: "en-CA" }}">
 
-{% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-    <header class="page-header" role="banner">
-      <h1 class="project-name">MGCI Robotics Club</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-    </header>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
-      <footer class="site-footer">
-        <section id="contact">
-            <div class="text-center">
-                <a href="https://discord.gg/BTfXyec"><i class="fab fa-discord fa-3x" style="color:#00B2EE; padding:16px;"></i></a>
-                <a href="https://www.facebook.com/groups/3730979196935354/"><i class="fab fa-facebook-square fa-3x" style="color:#00B2EE; padding:16px;"></i></a>
-                <a href="mailto:roboticsmgci@gmail.com"><i class="fas fa-envelope-square fa-3x" style="color:#00B2EE; padding:16px;"></i></a>
-                <a href="https://github.com/mgcirobotics/mgcirobotics.github.io"><i class="fab fa-github-square fa-3x" style="color:#00B2EE; padding:16px;"></i></a>
-                <br>
-                <span>Marc Garneau CI, 135 Overlea Blvd, North York, ON M3C 1B3</span>
-                <br>
-                <span>This page is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license</span>
-            </div>
-        </section>
+	{% seo %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#157878">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+</head>
 
-      </footer>
-    </main>
-  </body>
+<body>
+	<a id="skip-to-content" href="#content">Skip to the content.</a>
+	{% include navbar.html %}
+	<header class="page-header" role="banner">
+		<h1 class="project-name">MGCI Robotics Club</h1>
+		<h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+		{% if site.github.is_project_page %}
+		<a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+		{% endif %}
+	</header>
+
+	<main id="content" class="main-content" role="main">
+		{{ content }}
+		{% include footer.html %}
+	</main>
+
+</body>
+
 </html>
