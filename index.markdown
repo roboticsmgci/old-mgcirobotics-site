@@ -7,7 +7,7 @@ header:
   actions:
     - label: "Download"
       url: "https://github.com"
-author_profile: true
+author_profile: false
 classes: wide
 sidebar:
   - title: "Role"
