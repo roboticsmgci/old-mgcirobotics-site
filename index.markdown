@@ -37,4 +37,4 @@ Hello <a href="#" class="btn btn--info">Link Text</a>
 
 {% include figure image_path="/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
 
-{% include feature_row %}
+{{ feature_row }}
