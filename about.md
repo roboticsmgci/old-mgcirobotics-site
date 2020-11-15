@@ -3,7 +3,7 @@ layout: archive
 permalink: /about/
 ---
 
-# Who are we?
+# Who we are
 
 We are a passionate group of students focused on building a community with passion about robotics. We compete in some events, but are currently focused on increasing the interest in robotics at MGCI!
 
