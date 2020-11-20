@@ -3,7 +3,7 @@ layout: archive
 title: Who we are
 permalink: /about/
 ---
-We are a passionate group of students focused on building a community with passion about robotics. We compete in some events, but are currently focused on increasing the interest in robotics at MGCI!
+We're a passionate and dedicated group of students who make up the Robotics Club of Marc Garneau Collegiate Institute, a secondary school located in Flemingdon Park, Toronto. Our club aims to educate students and promote robotics, encouraging teamwork through providing hands-on and interactive experiences with robotics such as holding workshops and competing in tournaments.
 
 # Our History
 
