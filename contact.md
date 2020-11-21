@@ -2,5 +2,4 @@
 layout: archive
 permalink: /contact/
 ---
-
-Find us here:
+<a href="https://www.facebook.com/groups/roboticsmgci"><i class="fab fa-fw fa-facebook-square"><p>roboticsmgci</p></a>
