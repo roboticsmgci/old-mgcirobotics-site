@@ -19,7 +19,9 @@ MGCI Robotics Club has had a relatively short history when compared to other clu
 
 **2015-2016** - Zone01 competition second place
 
-**2018-2019** - UOIT Sumobots first place, best new team, novel design
+**2016-2017** - UOIT Sumobots best new team award
+
+**2018-2019** - UOIT Sumobots first place, engineering, novel design
 
 **2019-2020** - UOIT Sumobots first place, third place, novel design
 
