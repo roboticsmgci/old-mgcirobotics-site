@@ -6,7 +6,7 @@ permalink: /contact/
 
 Join us on [Discord](https://discord.gg/f8qUtzFPWZ) <i class="fab fa-fw fa-discord">
 
-Join us on [Facebook](https://www.facebook.com/groups/roboticsmgci) <i class="fab fa-fw fa-facebook">
+Join us on [Facebook](https://www.facebook.com/RoboticsMGCI) <i class="fab fa-fw fa-facebook">
 
 Join us on [Instagram](https://www.instagram.com/mgci_robotics/) <i class="fab fa-fw fa-instagram">
 
