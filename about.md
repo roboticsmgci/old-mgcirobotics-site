@@ -15,14 +15,14 @@ MGCI Robotics Club has had a relatively short history when compared to other clu
 **Jeremy Phy**
 
 # Achievements
-**2014-2015** - Zone01 competition nationals
+**2014-2015** - Zone01 competition reached nationals
 
 **2015-2016** - Zone01 competition second place
 
 **2018-2019** - UOIT Sumobots first place, best new team, novel design
 
-**2019-2020** - UOIT Sumobots first place and third place
+**2019-2020** - UOIT Sumobots first place, third place, novel design
 
-**2020-2021** - FRC Game Design Challenge Rookie Design Awar
+**2020-2021** - FRC Game Design Rookie Design Award
 
 **2021-2022** - ???
