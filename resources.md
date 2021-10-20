@@ -3,10 +3,12 @@ layout: archive
 title: Resources
 permalink: /resources/
 ---
-Here are some resources to help you on your robotics journey. If you need any help, there are many like-minded robotics enthusiasts on our Discord server.
+Here are some resources to help you on your robotics journey. Feel free to [contact us](https://mgcirobotics.github.io/contact/) if you need any robotics-related help, want to suggest a helpful resource, or want to report a broken link.
 
-## Latest Workshop
-<iframe src="https://drive.google.com/file/d/16mLLE3v0NEZxFhEawRZvD0zAErciu6Jf/preview" width="640" height="480"></iframe>
+## Workshops
 
-## Other Workshops
-Other workshops are accessible [here](https://drive.google.com/drive/folders/1esp6tOOWZZEOnlTFBZ8iQr9vYNJqQ3hk).
+## First Robotics Competition
+
+## First Lego League
+
+## SumoBots
