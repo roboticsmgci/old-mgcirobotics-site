@@ -11,6 +11,14 @@ Here are some resources to help you on your robotics journey. Feel free to [cont
 
 ## First Lego League
 
+| Description  | Link |
+| ------------- | ------------- |
+| Everything in the Sumobots resources section, as both FLL and Sumobots use the same hardware. | [Link](https://mgcirobotics.github.io/resources/) |
+| Collection of FLL tutorials all about hardware, software, and core values. | [Link](https://flltutorials.com/en/) |
+| FLL challenges and resources page with both year-specific and general information. | [Link](https://www.firstinspires.org/resource-library/fll/challenge/challenge-and-resources) |
+| Interactive tutorial that takes you from zero knowledge to a fully functional robot. | [Link](https://www.sos.wa.gov/_assets/library/libraries/projects/youthservices/legomindstormsev3programmingbasics.pdf) |
+| Retailer to order replacement EV3 bricks, batteries, motors, sensors, and cables. | [Link](https://www.bricklink.com/catalogList.asp?catType=S&catString=59.800) |
+
 ## Sumobots
 
 | Description  | Link |
