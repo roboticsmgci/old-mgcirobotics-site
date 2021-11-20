@@ -1,338 +1,61 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <title>Gallery | MGCI Robotics</title>
-        <style>
-            @font-face {
-                font-family: sf-compact;
-                src: url(SF-UI-Display-Black.ttf);
-            }
-            body {
-                background-color: #262A35;
-            }
-            h1, a {
-                font-family: sf-compact;
-                color: white;
-            }
-            #about, #blog, #contact, #resources {
-                color: white;
-                font-family: sf-compact;
-                border-bottom: 0.1vw solid white;
-                border-top: 0.1vw solid white;
-                padding: 0.5vw;
-                margin-right: 3vw;
-            }
-            #about:hover, #blog:hover, #contact:hover, #resources:hover {
-                transition-duration: 1s;
-                background-color: white;
-                color: #262A35;
-            }
-            #about:not(:hover), #blog:not(:hover), #contact:not(:hover), #resources:not(:hover) {
-                transition-duration: 1s; 
-                background-color: transparent;
-                color: white;
-            }
-            #title{
-                font-size: 1.75vw;
-                padding: 5vw;
-            }
-            #title:hover {
-                opacity: 0.8;
-                cursor: pointer;
-            }
-            #moreinfo {
-                font-size: 2.5vw;
-                padding-top: 2vw;
-                padding-left: 5vw;
-                padding-bottom: 1vw;
-                color: #262A35;
-                text-decoration: underline;
-            }
-            .navbar {
-                margin-top: 2.5vw;
-                padding-bottom: 2vw;
-                border-bottom: 1px solid white;
-            }
-            .links {
-                float: right;
-            }
-            .links a{
-                font-size: 1.75vw;
-                padding-right: 5vw;
-                text-decoration: none;
-            }
-            #gallerytitle {
-                padding-left: 5vw;
-                margin-top: 2vw;
-                font-size: 2.5vw;
-            }
-            .gallery {
-                margin-left: 2vw;
-                margin-top: 2.5vw;
-                position: relative;
-                width: 93vw;
-            }
-            table {
-                width: 90vw;
-                margin-top: -1vw;
-            }
-            img {
-                width: 23vw;
-                display: block;
-                padding-left: 0.5;
-                padding-right: 0.5vw;
-                padding-top: 0.5vw;
-                padding-bottom: 0.5vw;
-            }
-            button {
-                width: 23vw;
-                background-color: transparent;
-                border: none;
-                font-family: sf-compact;
-                font-size: 1vw;
-                color: white;
-                margin-top: -7.5vw;
-                position: absolute;
-                visibility: hidden;
-                opacity: 0;
-                transition: visibility 1.25s, opacity 1s linear;
-            }
-            #img7 {
-                height: 15.3vw;
-            }
-            .insideimg:hover {
-                transition-duration: 1s;
-                opacity: 0.4;
-                cursor: pointer;
-            }
-            .insideimg:not(:hover) {
-                transition-duration: 1s;
-                opacity: 1;
-            }
-            #img1:hover + #btn1{
-                visibility: visible;
-                opacity: 1;
-            }
-            #img1:not(:hover) + #btn1 {
-                transition-duration: 1s;
-                visibility: hidden;
-                opacity: 0;
-            }
-            #img2:hover + #btn2{
-                visibility: visible;
-                opacity: 1;
-            }
-            #img2:not(:hover) + #btn2 {
-                transition-duration: 1s;
-                visibility: hidden;
-                opacity: 0;
-            }
-            #img3:hover + #btn3{
-                visibility: visible;
-                opacity: 1;
-            }
-            #img3:not(:hover) + #btn3 {
-                transition-duration: 1s;
-                visibility: hidden;
-                opacity: 0;
-            }
-            #img4:hover + #btn4{
-                visibility: visible;
-                opacity: 1;
-            }
-            #img4:not(:hover) + #btn4 {
-                transition-duration: 1s;
-                visibility: hidden;
-                opacity: 0;
-            }
-            #img5:hover + #btn5{
-                visibility: visible;
-                opacity: 1;
-            }
-            #img5:not(:hover) + #btn5 {
-                transition-duration: 1s;
-                visibility: hidden;
-                opacity: 0;
-            }
-            #img6:hover + #btn6{
-                visibility: visible;
-                opacity: 1;
-            }
-            #img6:not(:hover) + #btn6 {
-                transition-duration: 1s;
-                visibility: hidden;
-                opacity: 0;
-            }
-            #img7:hover + #btn7{
-                visibility: visible;
-                opacity: 1;
-            }
-            #img7:not(:hover) + #btn7 {
-                transition-duration: 1s;
-                visibility: hidden;
-                opacity: 0;
-            }
-            #img8:hover + #btn8{
-                visibility: visible;
-                opacity: 1;
-            }
-            #img8:not(:hover) + #btn8 {
-                transition-duration: 1s;
-                visibility: hidden;
-                opacity: 0;
-            }
-            #cardimg {
-                width: 15vw;
-                margin-left: 2vw;
-                text-align: center;
-                float: left;
-                padding-bottom: 3vw;
-            }
-            #cardtitle {
-                margin-left: 20vw;
-                margin-top: 3vw;
-                color: #262A35;
-                font-size: 2.5vw;
-                padding-left: 2vw;
-            }
-            .card {
-                background-color: white;
-                height: 25vw;
-            }
-            #cardcaption {
-                color: #262A35;
-                margin-left: 20vw;
-                font-size: 1.75vw;
-                padding-left: 2vw;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="navbar">
-            <a id='title'>MGCI Robotics (Team 8574)</a>
-            <div class="links">
-                <a id='about' href="">About</a>
-                <a id='blog' href="">Blog</a>
-                <a id='contact' href="">Contact</a>
-                <a id='resources' href="">Resources</a>
-            </div>
-        </div>
-        <h1 id="gallerytitle">Gallery</h1>
-        <div class="oh">
-            <div class="gallery" id="gallery">
-                <table id='table1'>
-                    <tr>
-                        <td>
-                            <img class='insideimg' id="img1" src="IMG_4488.JPG" alt=""/>
-                            <button id="btn1">See More About This Photo</button>
-                        </td>
-                        <td>
-                            <img class='insideimg' id="img2" src="IMG_4551.JPG" alt=""/>
-                            <button id="btn2">See More About This Photo</button>
-                        </td>
-                        <td>
-                            <img class='insideimg' id="img3" src="IMG_4588.JPG" alt=""/>
-                            <button id="btn3">See More About This Photo</button>
-                        </td>
-                        <td>
-                            <img class='insideimg' id="img4" src="IMG_4603.JPG" alt=""/>
-                            <button id="btn4">See More About This Photo</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img class='insideimg' id="img5" src="IMG_4859.JPG" alt=""/>
-                            <button id="btn5">See More About This Photo</button>
-                        </td>
-                        <td>
-                            <img class='insideimg' id="img6" src="IMG_5003.JPG" alt=""/>
-                            <button id="btn6">See More About This Photo</button>
-                        </td>
-                        <td>
-                            <img class='insideimg' id="img7" src="PB240665.jpg" alt=""/>
-                            <button id="btn7">See More About This Photo</button>
-                        </td>
-                        <td>
-                            <img class='insideimg' id="img8" src="PB240736-2.jpg" alt=""/>
-                            <button id="btn8">See More About This Photo</button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="card">
-            <h1 id='moreinfo'>More Info:</h1>
-            <img src="def.jpg" alt="" id="cardimg">
-            <h1 id="cardtitle">2018 Sumobots</h1>
-            <h1 id="cardcaption">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
-        </div>
-    </body>
-    <script>
-        function robotics(img, title, text, imgid, selector, width, height, displacement) {
-            window.location = "#cardcaption"
-            $("#cardcaption").css("text-indent", "2vw");
-            $("#cardtitle").css("text-indent", "2vw"); 
-            $("#cardimg").fadeOut(1000, function() {
-                $("#cardimg").attr("src", imgid);
-                $("#cardimg").css("width", width);
-            });
-            $("#cardimg").fadeIn(1000);
-            $("#cardtitle").fadeOut(1000, function() {
-                $("#cardtitle").html(title);
-            });
-            $("#cardtitle").fadeIn(1000);
-            $("#cardcaption").fadeOut(1000, function() {
-                $("#cardcaption").html(text);
-            });
-            $("#cardcaption").fadeIn(1000);
-            $(selector).css("opacity", "0.4");
-            $(button).css({visibility: visible, opacity: 1});
-            $(button).html("Shown Below")
-            $("#cardtitle").css("margin-left", displacement);
-            $("#cardimg").css("height", height); 
-        }
-        function robotics2(img) {
-            for (i=1; i<9; i++) {
-                if(i==img) {
+---
+layout: splash
+tagline: "Blog: September Newsletter"
+header:
+  overlay_image: /assets/images/robot.jpg
+  overlay_filter: 0.4 # same as adding an opacity of 0.5 to a black background
+  actions:
+    - label: Read More
+      url: "https://mgcirobotics.github.io/newsletters/september-newsletter/"
+---
 
-                } else {
-                    var select = "#img" + i;
-                    $(select).css("opacity", 1);
-                }
-            }
-        }
-        $("#img1").click(function(){
-            robotics2(1);
-            robotics("img1", "2018 Sumobots", "The bots battle it out!", "IMG_4488.JPG", "#img1", "20vw", "auto", "35vw");
-        });
-        $("#img2").click(function(){
-            robotics2(2);
-            robotics("img2", "2018 Sumobots", "The team figures out a new strategy!", "IMG_4551.JPG", "#img2", "20vw", "auto", "35vw");
-        });
-        $("#img3").click(function(){
-            robotics2(3);
-            robotics("img3", "2018 Sumobots", "Admiring a beautiful creation!", "IMG_4588.JPG", "#img3", "20vw", "auto", "35vw");
-        });
-        $("#img4").click(function(){
-            robotics2(4);
-            robotics("img4", "2018 Sumobots", "Team analysis and bug patching!", "IMG_4603.JPG", "#img4", "20vw", "auto", "35vw");
-        });
-        $("#img5").click(function(){
-            robotics2(5);
-            robotics("img5", "2018 Sumobots", "The smiles of accomplishment!", "IMG_4859.JPG", "#img5", "20vw", "auto", "35vw");
-        });
-        $("#img6").click(function(){
-            robotics2(6);
-            robotics("img6", "2018 Sumobots", "Team is ecstatic after ANOTHER successful year!", "IMG_5003.JPG", "#img6", "20vw", "auto", "35vw");
-        });
-        $("#img7").click(function(){
-            robotics2(7);
-            robotics("img7", "2018 Sumobots", "Up close and in detail!", "PB240665.jpg", "#img7", "20vw", "13.3vw", "35vw");
-        });
-        $("#img8").click(function(){
-            robotics2(8);
-            robotics("img8", "2018 Sumobots", "The friendly faces of MGCI Robotics 2018", "PB240736-2.jpg", "#img8", "20vw", "auto", "35vw");
-        });
-    </script>
-</html>
+<!-- <h1> Hello little intro here </h1>
+please write intro here-->
+
+<div class="feature__wrapper">
+  <div class="feature__item--right">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
+        <img src="/assets/images/IMG_2527.jpg" alt="placeholder image 2" />
+      </div>
+      <div class="archive__item-body">
+        <h2 class="archive__item-title">UOIT Sumobots Winners!</h2>
+        <div class="archive__item-excerpt">
+          <p>UOIT Sumobots first, and third place. ✨ Back to back wins at UOIT Sumobots! Click the button below to
+            find articles about how we won, our management of resources and the development of future teams!</p>
+        </div>
+        <p><a href="/archive/" class="btn btn--primary">Read More</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="feature__wrapper">
+  <div class="feature__item--left">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
+        <img src="/assets/images/RLogo.jpg" alt="placeholder image 2" />
+      </div>
+      <div class="archive__item-body">
+        <h2 class="archive__item-title">Join The Team</h2>
+        <div class="archive__item-excerpt">
+          <p>MGCI Robotics welcomes all future and returning sponsors to the team! Your Support allows us to take part in competitions, strengthen our team, and to promote STEM learning. We use funding for:</p>
+          <dl>
+            <dt>Event Registration</dt>
+            <dt>Kits, Parts, Tools, Software</dt>
+            <dt>Field and Game pieces</dt>
+          </dl>
+          <p>In supporting us you'll receive:</p>
+          <dl>
+            <dt>Branding on shirts, robots, and other media</dt>
+            <dt>Community Outreach</dt>
+              <dd>Support those interested in Robotics from the Flemingdon Park and Thorncliffe communities.</dd>
+            <dt>Support diversity in STEM</dt>
+              <dd>50% of our members are female or non-binary, while 98% are visible minorities.</dd>
+          </dl>
+        </div>
+        <p><a href="https://drive.google.com/file/d/1QtUdx0kXWtSNEYiE3zeC-LRx9fDjNyFq/view" class="btn btn--primary">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
